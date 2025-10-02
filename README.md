@@ -57,6 +57,14 @@ static/app.js     # Front-end logic, data fetching, charts, and interactivity
 
 4. Visit [http://localhost:8000](http://localhost:8000) in a modern browser.
 
+### Troubleshooting
+
+- **IndentationError referencing `git apply`** – if you copied files from an earlier
+  patch snippet, `app.py` may accidentally contain the literal patch instructions.
+  Re-clone or re-download the repository so the first line of `app.py` begins with
+  `import json` (or run `git checkout -- app.py` inside the repo) before starting the
+  server.
+
 ## API Overview
 
 All API endpoints return JSON responses and reside under `/api`.
